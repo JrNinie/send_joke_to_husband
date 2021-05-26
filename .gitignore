@@ -1,0 +1,6 @@
+# Confidential file
+.env
+
+# Others
+.vscode
+.DS_Store
