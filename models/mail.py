@@ -4,7 +4,7 @@ import settings
 
 class Mail:
     def send_mail(self,
-                  content=None,
+                  contents=None,
                   sender_mail=settings.SENDER_MAIL,
                   sender_password=settings.SENDER_PASSWORD,
                   sender_host=settings.SENDER_HOST,
@@ -33,4 +33,4 @@ class Mail:
                            password=sender_password,
                            host=sender_host)
         # Sending the email
-        yag.send(to=receiver_mail, subject=subject, contents=content)
+        yag.send(to=receiver_mail, subject=subject, contents=contents)

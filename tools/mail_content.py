@@ -1,5 +1,6 @@
 import requests
 
+
 def generate_fr_joke_from_api(token, random_joke_url, *disallowed_joke_types):
     """Generate jokes from "blagues API" (french jokes api)
 
@@ -33,3 +34,26 @@ def generate_fr_joke_from_api(token, random_joke_url, *disallowed_joke_types):
                             headers={'Authorization': 'Bearer ' + token})
     data = response.json()
     return data["joke"] + " " + data["answer"]
+
+
+def generate_current_weather(current_weather_url, location, api_secret_key):
+    """Generate current weather from OpenWeather API
+
+    Parameters
+    ----------
+    current_weather_url : string
+        URL for current weather request
+    location : string
+        Location desired
+    api_secret_key : string
+        Secret personal API token
+
+    Returns
+    -------
+    string
+        Current weather in HTML format
+    """
+    current_weather = requests.get(
+        f"{current_weather_url}?q={location}&appid={api_secret_key}&mode=html")
+
+    return current_weather.text
