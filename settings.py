@@ -21,3 +21,7 @@ DISALLOWED_JOKE_TYPES = ["limit", "dark", "blondes"]
 CURRENT_WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
 LOCATION = "Labège"
 OPENWEATHER_TOKEN = os.getenv("OPENWEATHER_TOKEN")
+
+# Logger
+LOGGER_LEVEL = "DEBUG"
+LOGGER_PATH = "mail_joke_to_husband.log"

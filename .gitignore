@@ -1,6 +1,9 @@
 # Confidential file
 .env
 
+# Default log file
+mail_joke_to_husband.log
+
 # Others
 .vscode
 .DS_Store
